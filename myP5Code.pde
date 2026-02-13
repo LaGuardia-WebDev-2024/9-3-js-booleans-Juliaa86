@@ -12,13 +12,22 @@ draw = function() {
   fill(0, 0, 0);
   textSize(30);
   text("Analysis of: " + theNumber, 10, 36);
-
+if(theNumber > 0){
   text("It's positive", 10, 90);
-  text("It's negative", 10, 140);
-  text("It's zero", 10, 190);
-
   noFill();
   rect(5, 60, 200, 40); 
+}
+if(theNumber < 0){
+  text("It's negative", 10, 140);
+   noFill();
+  rect(5, 110, 200, 40); 
+}
+if(theNumber === 0){
+  text("It's zero", 10, 190);
+   noFill();
+  rect(5, 160, 200, 40); 
+}
+
 };
 
 //draw Function - will run when mouseClicked
